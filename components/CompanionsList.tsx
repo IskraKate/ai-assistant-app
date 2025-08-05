@@ -19,7 +19,7 @@ interface CompanionsListProps {
 const CompanionsList = ({title, companions, classNames}: CompanionsListProps) => {
     return (
         <article className={cn('companions-list', classNames)}>
-            <h2 className="font-bold text-3xl">Recent Sessions</h2>
+            <h2 className="font-bold text-3xl">{title}</h2>
             <Table>
                 <TableHeader>
                     <TableRow>
@@ -74,7 +74,8 @@ const CompanionsList = ({title, companions, classNames}: CompanionsListProps) =>
                                         {duration} {' '}
                                         <span className="max-md:hidden">mins</span>
                                     </p>
-                                    <Image src="/icons/clock.svg" alt="minutes" width={14} height={14} className="md:hidden"/>
+                                    <Image src="/icons/clock.svg" alt="minutes" width={14} height={14}
+                                           className="md:hidden"/>
                                 </div>
                             </TableCell>
                         </TableRow>))}
